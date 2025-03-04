@@ -28,8 +28,9 @@ export const getRecipes = async (
       filterValue = getQueryString(category);
     }
 
-    if (filterValue === undefined) {
-      res.status(400).json({ message: "Invalid filter parameter" });
+    if (!filterType || !filterValue) {
+      const recipes = await fetchRecipes();
+      res.json(recipes);
       return;
     }
 
