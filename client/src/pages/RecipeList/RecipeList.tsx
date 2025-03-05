@@ -35,7 +35,7 @@ export default function RecipeList() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.title_wrapper}>
-        <h1 className={styles.title}>All Recipes</h1>
+        <h2 className={styles.title}>All Recipes</h2>
       </div>
       {isLoading ? (
         <Loader />
